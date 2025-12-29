@@ -1247,14 +1247,16 @@ main {
 }
 
 .splash-body {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
+    text-align: center;
 }
 
 .splash-image-container {
     width: 100%;
+    max-width: 500px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
