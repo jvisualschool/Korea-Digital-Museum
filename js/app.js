@@ -200,6 +200,8 @@ function navigateTo(view, params = {}) {
 // Event Listeners for Nav
 document.getElementById('nav-home').addEventListener('click', (e) => {
     e.preventDefault();
+    // If the logo image was clicked, do NOT navigate home (let splash modal handle it)
+    if (e.target.id === 'logo-splash-trigger') return;
     navigateTo('home');
 });
 
