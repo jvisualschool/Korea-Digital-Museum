@@ -13,6 +13,7 @@ Thumbs.db
 
 # Sensitive server configuration
 jinhojung_org_server.json
+config.php
 *.pem
 
 # Local logs and temporary files

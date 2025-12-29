@@ -4,7 +4,14 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/xml; charset=UTF-8");
 
 $baseUrl = "http://www.emuseum.go.kr/openapi/relic";
-$serviceKey = "***REMOVED_API_KEY***";
+// Load configuration
+$configPath = __DIR__ . '/config.php';
+if (!file_exists($configPath)) {
+    http_response_code(500);
+    die("Error: config.php not found. Please create it and add your serviceKey.");
+}
+$config = require $configPath;
+$serviceKey = $config['serviceKey'];
 
 // Determine the endpoint (list or detail)
 $action = isset($_GET['action']) ? $_GET['action'] : 'list';
