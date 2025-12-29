@@ -1371,8 +1371,10 @@ main {
         align-items: center;
     }
 }
+
 /* Email Link in Modal */
-.email-link {
+.email-link,
+.email-link:visited {
     color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition);
