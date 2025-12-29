@@ -785,11 +785,7 @@ function initSplashModal() {
         if (e.target === splashModal) hideModal();
     });
 
-    // Show automatically on first load in this session
-    if (!sessionStorage.getItem('splashShown')) {
-        setTimeout(showModal, 500);
-        sessionStorage.setItem('splashShown', 'true');
-    }
+    // Removed: Auto-show on first load - now only shows on icon click
 }
 
 // Update initialization
