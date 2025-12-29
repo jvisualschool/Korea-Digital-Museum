@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-MUSEUM 갤러리</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo" id="nav-home">
+            <img src="img/J.png" alt="J" class="logo-j">
+            DigitalMuseum
+        </a>
+        <div class="header-controls">
+            <div class="api-status" id="api-status">API 상태 <span class="status-dot">🟢</span><span
+                    id="response-time-wrap"></span></div>
+            <div class="theme-toggle" id="theme-toggle">
+                <i data-lucide="moon" class="theme-icon moon-icon"></i>
+                <div class="toggle-switch">
+                    <div class="toggle-slider"></div>
+                </div>
+                <i data-lucide="sun" class="theme-icon sun-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main id="app">
+        <!-- Content will be injected here -->
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
