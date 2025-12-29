@@ -953,16 +953,18 @@ main {
 
 /* 콘텐츠를 배경 위에 겹치게 배치 */
 .hero-content {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 450px;
+    height: 100%;
     z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem 4rem;
-    /* Top padding increased to clear sticky header */
+    padding: 6.5rem 2rem 4rem;
+    /* Clear header and center content */
 }
 
 .hero-content p {
