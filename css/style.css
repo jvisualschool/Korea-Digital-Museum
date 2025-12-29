@@ -1288,8 +1288,10 @@ main {
 
 .info-grid {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -1297,6 +1299,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+    padding: 0 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.info-item:last-child {
+    border-right: none;
 }
 
 .info-item .label {
