@@ -570,7 +570,7 @@ function renderSearch() {
     app.appendChild(section);
 
     appendFooter();
-    
+
     // Lucide 아이콘 초기화
     if (typeof lucide !== 'undefined') lucide.createIcons();
 }
@@ -727,18 +727,18 @@ function startHeroSlider() {
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'dark';
-    
+
     // Set initial theme
     document.documentElement.setAttribute('data-theme', currentTheme);
-    
+
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     });
-    
+
     // Initialize Lucide icons for theme toggle
     if (typeof lucide !== 'undefined') lucide.createIcons();
 }
@@ -753,21 +753,23 @@ function initSplashModal() {
     const closeBtn = document.getElementById('close-splash');
     const startBtn = document.getElementById('start-project');
 
+    if (!splashModal) return;
+
     const showModal = () => {
         splashModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scroll
+        document.body.style.overflow = 'hidden';
     };
 
     const hideModal = () => {
         splashModal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scroll
+        document.body.style.overflow = '';
     };
 
     // Show on logo click
     if (splashTrigger) {
         splashTrigger.addEventListener('click', (e) => {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopPropagation(); // Prevent nav-home click
             showModal();
         });
     }

@@ -96,6 +96,7 @@ header {
     width: 24px;
     height: 24px;
     margin-right: 0.3rem;
+    cursor: pointer;
 }
 
 .header-controls {
