@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-MUSEUM 갤러리</title>
+    <title>J Digital Museum</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
 <body>
     <header>
         <a href="#" class="logo" id="nav-home">
-            <img src="img/J.png" alt="J" class="logo-j">
-            DigitalMuseum
+            <img src="img/J.png" alt="J" class="logo-j" id="logo-splash-trigger">
+            J Digital Museum
         </a>
         <div class="header-controls">
             <div class="api-status" id="api-status">API 상태 <span class="status-dot">🟢</span><span
@@ -37,6 +37,43 @@
     <main id="app">
         <!-- Content will be injected here -->
     </main>
+
+    <!-- Splash Modal -->
+    <div id="splash-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="close-modal" id="close-splash">&times;</button>
+            <div class="splash-body">
+                <div class="splash-image-container">
+                    <img src="img/splash.png" alt="Splash Image" class="splash-img">
+                </div>
+                <div class="splash-info">
+                    <h1>J Digital Museum</h1>
+                    <p class="subtitle">대한민국의 소중한 문화유산을 한눈에</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">제작자</span>
+                            <span class="value">Jinho Jung</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">기술 스택</span>
+                            <span class="value">HTML5, vanilla CSS3, Vanilla JS (ES6+), PHP</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">사용 API</span>
+                            <span class="value">공공데이터포털 - 국립중앙박물관 소장품 조회 API</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">디자인</span>
+                            <span class="value">Modern Glassmorphism & Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <button class="start-btn" id="start-project">시작하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/api.js"></script>
     <script src="js/app.js"></script>

@@ -744,4 +744,52 @@ function initThemeToggle() {
 }
 
 // Initialize theme toggle when DOM is loaded
-document.addEventListener('DOMContentLoaded', initThemeToggle);
+// Initialized via the combined listener below
+// document.addEventListener('DOMContentLoaded', initThemeToggle);
+/* --- Splash Modal Functionality --- */
+function initSplashModal() {
+    const splashModal = document.getElementById('splash-modal');
+    const splashTrigger = document.getElementById('logo-splash-trigger');
+    const closeBtn = document.getElementById('close-splash');
+    const startBtn = document.getElementById('start-project');
+
+    const showModal = () => {
+        splashModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    };
+
+    const hideModal = () => {
+        splashModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    // Show on logo click
+    if (splashTrigger) {
+        splashTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showModal();
+        });
+    }
+
+    // Hide on buttons
+    if (closeBtn) closeBtn.addEventListener('click', hideModal);
+    if (startBtn) startBtn.addEventListener('click', hideModal);
+
+    // Hide on outside click
+    splashModal.addEventListener('click', (e) => {
+        if (e.target === splashModal) hideModal();
+    });
+
+    // Show automatically on first load in this session
+    if (!sessionStorage.getItem('splashShown')) {
+        setTimeout(showModal, 500);
+        sessionStorage.setItem('splashShown', 'true');
+    }
+}
+
+// Update initialization
+document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
+    initSplashModal();
+});
