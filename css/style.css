@@ -1371,3 +1371,14 @@ main {
         align-items: center;
     }
 }
+/* Email Link in Modal */
+.email-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
