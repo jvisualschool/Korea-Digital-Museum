@@ -1,7 +1,15 @@
 #!/bin/bash
 
 # E-Museum API 검색 결과 수집 스크립트 (macOS 호환)
-API_KEY="***REMOVED_API_KEY***"
+# 환경 변수에서 API 키를 가져옵니다
+API_KEY="${EMUSEUM_API_KEY}"
+
+if [ -z "$API_KEY" ]; then
+    echo "오류: 환경 변수 EMUSEUM_API_KEY가 설정되지 않았습니다." >&2
+    echo "사용법: export EMUSEUM_API_KEY='your-api-key'" >&2
+    exit 1
+fi
+
 BASE_URL="http://www.emuseum.go.kr/openapi/relic/list"
 
 echo "{"

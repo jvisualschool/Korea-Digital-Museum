@@ -20,7 +20,7 @@ https://www.emuseum.go.kr/imageSearch 와 비슷한 기능의
 https://www.data.go.kr/data/3036708/openapi.do
 
 
-인증키 : 	***REMOVED_API_KEY***
+인증키 : 환경변수 EMUSEUM_API_KEY 사용 (보안상 하드코딩 금지)
 
 
 

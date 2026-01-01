@@ -6,7 +6,7 @@ import sys
 import time
 
 # API Configuration
-API_KEY = "***REMOVED_API_KEY***"
+from config import API_KEY
 BASE_URL = "http://www.emuseum.go.kr/openapi/relic"
 
 # Target List (Optimized Keywords, Filename)
